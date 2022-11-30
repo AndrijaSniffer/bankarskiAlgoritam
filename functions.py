@@ -119,7 +119,7 @@ def generateProcessToRequestResourcesAuto(n: ndarray, t: ndarray):
     prequestKey = random.randint(0, numberOfRows - 1)
     prequestValue = np.zeros(numberOfColumns, dtype=int)
 
-    for i in range(numberOfColumns - 1):
+    for i in range(numberOfColumns):
         maximum = min(n[prequestKey][i], np.min(t))
         if random.uniform(1, 6) == 5:
             prequestValue[i] = random.randint(0, maximum + 4)
