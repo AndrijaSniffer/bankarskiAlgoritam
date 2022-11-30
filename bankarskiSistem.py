@@ -4,29 +4,31 @@ manual = False
 
 if manual:
     t = f.generateTotalArrayManual()
-    print(t, end=f"\n\n")
+    print(f"T = {t}", end=f"\n\n")
     a = f.generateAllocatedMatrixManual()
-    print(a, end=f"\n\n")
+    print(f"A = \n{a}", end=f"\n\n")
     m = f.generateMaxMatrixManual()
-    print(m, end=f"\n\n")
+    print(f"M = \n{m}", end=f"\n\n")
 
 else:
     t = f.generateTotalArrayAuto()
-    print(t, end=f"\n\n")
+    print(f"T = {t}", end=f"\n\n")
     a = f.generateAllocatedMatrixAuto(t)
-    print(a, end=f"\n\n")
+    print(f"A = \n{a}", end=f"\n\n")
     m = f.generateMaxMatrixAuto(t, a)
-    print(m, end=f"\n\n")
+    print(f"M = \n{m}", end=f"\n\n")
 
 
 v = f.calculateFirstAvailableResources(t, a)
-print(v, end=f"\n\n")
+print(f"V = {v}", end=f"\n\n")
+
+wait = input("Press enter to show the solution...")
 
 n = m - a
-print(n, end=f"\n\n")
+print(f"N = \n{n}", end=f"\n\n")
 
 request = f.generateProcessToRequestResourcesAuto(n, t)
-print(request)
+print(f"Request process: {request}")
 
 if f.checkConstraintsForRequesting(request, m, v):
     row = request[0]
@@ -43,4 +45,4 @@ if f.checkConstraintsForRequesting(request, m, v):
         print(f"Sekvenca je nesigurna: {processSequence}")
 
 else:
-    print("Proces trazi vise resursa nego sto je najavio da ce koristiti")
+    print("Proces trazi vise resursa!")

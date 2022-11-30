@@ -15,7 +15,7 @@ def clear():
 
 def generateTotalArrayManual():
     global numberOfColumns
-    clear()
+    # clear()
 
     tn = int(input("Unesite velicinu \"Total\" niza: "))
     t = np.zeros(tn)
@@ -29,7 +29,7 @@ def generateTotalArrayManual():
 
 def generateTotalArrayAuto():
     global numberOfColumns
-    clear()
+    # clear()
 
     tn = random.randint(const.MIN_TOTAL_ARRAY, const.MAX_TOTAL_ARRAY)
     t = np.random.randint(const.MIN_TOTAL_ARRAY_VALUE, const.MAX_TOTAL_ARRAY_VALUE, tn, dtype=int)
@@ -40,7 +40,7 @@ def generateTotalArrayAuto():
 
 def generateAllocatedMatrixManual():
     global numberOfRows
-    clear()
+    # clear()
 
     an = int(input("Unesite broj redova allocated i max matrice: "))
     numberOfRows = an
@@ -56,7 +56,7 @@ def generateAllocatedMatrixManual():
 
 def generateAllocatedMatrixAuto(t):
     global numberOfRows
-    clear()
+    # clear()
 
     an = random.randint(const.MIN_AMN_ARRAY, const.MAX_AMN_ARRAY)
     numberOfRows = an
@@ -77,7 +77,7 @@ def checkSumOfColumns(a, t):
 
 
 def generateMaxMatrixManual():
-    clear()
+    # clear()
 
     m = np.zeros((numberOfRows, numberOfColumns), dtype=int)
 
