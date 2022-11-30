@@ -1,6 +1,3 @@
-import random
-import numpy as np
-
 import functions as f
 
 manual = False
