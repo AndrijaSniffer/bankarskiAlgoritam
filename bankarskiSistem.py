@@ -7,8 +7,11 @@ manual = False
 
 if manual:
     t = f.generateTotalArrayManual()
+    print(t, end=f"\n\n")
     a = f.generateAllocatedMatrixManual()
+    print(a, end=f"\n\n")
     m = f.generateMaxMatrixManual()
+    print(m, end=f"\n\n")
 
 else:
     t = f.generateTotalArrayAuto()
@@ -21,9 +24,9 @@ else:
 
 v = f.calculateFirstAvailableResources(t, a)
 print(v, end=f"\n\n")
+
 n = m - a
 print(n, end=f"\n\n")
-
 
 request = f.generateProcessToRequestResourcesAuto(n, t)
 print(request)
